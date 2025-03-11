@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALF-LIFE 3 | TRAILER OFICIAL REVELADO</title>
+    <style>
+        :root {
+            --hl-orange: #ff6700;
+            --hl-dark: #121212;
+            --hl-gray: #2e2e2e;
+            --hl-light: #f0f0f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--hl-dark);
+            color: var(--hl-light);
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMC41IiBmaWxsPSIjMjIyMjIyIi8+PC9zdmc+');
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-bottom: 3px solid var(--hl-orange);
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 103, 0, 0.1), transparent);
+            z-index: -1;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--hl-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 103, 0, 0.7);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--hl-orange);
+            font-size: 4rem;
+            margin: 0 5px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: var(--hl-light);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            padding: 8px 15px;
+            border-radius: 3px;
+        }
+        
+        nav a:hover {
+            color: var(--hl-orange);
+            background-color: rgba(255, 103, 0, 0.1);
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        .hero {
+            background-image: url('./images/imagem.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 30px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--hl-light);
+            text-shadow: 0 0 10px rgba(255, 103, 0, 0.7);
+        }
+        
+        h1 span {
+            color: var(--hl-orange);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--hl-orange);
+            color: var(--hl-light);
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px 40px;
+            border-radius: 3px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 103, 0, 0.4);
+        }
+        
+        .cta-button:hover {
+            background-color: #ff8a3c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 103, 0, 0.6);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background-color: var(--hl-gray);
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 3px solid var(--hl-orange);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--hl-orange);
+        }
+        
+        .feature-card p {
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        
+        footer {
+            background-color: var(--hl-gray);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 3px solid var(--hl-orange);
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .footer-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--hl-orange);
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .countdown-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 5px;
+            min-width: 80px;
+            text-align: center;
+            border: 1px solid rgba(255, 103, 0, 0.3);
+        }
+        
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--hl-orange);
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #a0a0a0;
+        }
+        
+        .hidden-player {
+            position: fixed;
+            top: -9999px;
+            left: -9999px;
+            visibility: hidden;
+        }
+        
+        .lambda-icon {
+            font-style: normal;
+            color: var(--hl-orange);
+            font-size: 2.5rem;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .logo span {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero {
+                height: 400px;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="hidden-content" class="hidden-player">
+        <iframe id="rickroll" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="lambda-icon">λ</i>HALF-LIFE <span>3</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Personagens</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Fórum</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>HALF-LIFE <span>3</span> REVELADO</h1>
+                <p class="subtitle">Após anos de espera, a Valve finalmente anunciou o tão aguardado Half-Life 3. Confira o trailer exclusivo e descubra todos os detalhes do jogo mais esperado da década.</p>
+                <div class="countdown">
+                    <div class="countdown-box">
+                        <div class="countdown-number">07</div>
+                        <div class="countdown-label">Dias</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number">12</div>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number">36</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number">45</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+                <button id="trailer-button" class="cta-button">ASSISTIR AO TRAILER OFICIAL</button>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>NOVO MOTOR GRÁFICO</h3>
+                <p>O Half-Life 3 utiliza o revolucionário Source 3, trazendo gráficos fotorrealistas, física avançada e interações ambientais nunca antes vistas em um jogo.</p>
+            </div>
+            <div class="feature-card">
+                <h3>CONTINUAÇÃO ÉPICA</h3>
+                <p>A história continua exatamente onde Half-Life: Alyx terminou, com Gordon Freeman enfrentando as consequências da alteração do timeline e buscando uma forma de derrotar o império Combine.</p>
+            </div>
+            <div class="feature-card">
+                <h3>JOGABILIDADE REVOLUCIONÁRIA</h3>
+                <p>Novos elementos de gameplay incluem um sistema de gravidade aprimorado, manipulação temporal e uma versão avançada da Gravity Gun que permite alterar a estrutura molecular dos objetos.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Site não-oficial de fãs de Half-Life. Este site não é afiliado à Valve Corporation. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const trailerButton = document.getElementById('trailer-button');
+            const rickrollFrame = document.getElementById('rickroll');
+            
+            trailerButton.addEventListener('click', function() {
+                // Set the stick bug URL with autoplay
+                rickrollFrame.src = "https://www.youtube.com/embed/fC7oUOUEEi4?autoplay=1&mute=0";
+                
+                // Create fullscreen modal for the video
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0,0,0,0.9)';
+                modal.style.display = 'flex';
+                modal.style.justifyContent = 'center';
+                modal.style.alignItems = 'center';
+                modal.style.zIndex = '9999';
+                
+                // Move the iframe to the modal
+                const videoContainer = document.createElement('div');
+                videoContainer.style.width = '80%';
+                videoContainer.style.maxWidth = '800px';
+                
+                const newFrame = document.createElement('iframe');
+                newFrame.width = '100%';
+                newFrame.height = '450';
+                newFrame.src = "https://www.youtube.com/embed/fC7oUOUEEi4?autoplay=1&mute=0";
+                newFrame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                newFrame.allowFullscreen = true;
+                
+                videoContainer.appendChild(newFrame);
+                modal.appendChild(videoContainer);
+                document.body.appendChild(modal);
+                
+                // Allow closing by clicking outside
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        document.body.removeChild(modal);
+                    }
+                });
+            });
+            
+            // Fake countdown
+            setInterval(function() {
+                const seconds = document.querySelector('.countdown-box:nth-child(4) .countdown-number');
+                let secondsValue = parseInt(seconds.textContent);
+                secondsValue--;
+                if (secondsValue < 0) {
+                    secondsValue = 59;
+                    const minutes = document.querySelector('.countdown-box:nth-child(3) .countdown-number');
+                    let minutesValue = parseInt(minutes.textContent);
+                    minutesValue--;
+                    if (minutesValue < 0) {
+                        minutesValue = 59;
+                        const hours = document.querySelector('.countdown-box:nth-child(2) .countdown-number');
+                        let hoursValue = parseInt(hours.textContent);
+                        hoursValue--;
+                        if (hoursValue < 0) {
+                            hoursValue = 23;
+                            const days = document.querySelector('.countdown-box:nth-child(1) .countdown-number');
+                            let daysValue = parseInt(days.textContent);
+                            daysValue--;
+                            if (daysValue < 0) daysValue = 0;
+                            days.textContent = daysValue.toString().padStart(2, '0');
+                        }
+                        hours.textContent = hoursValue.toString().padStart(2, '0');
+                    }
+                    minutes.textContent = minutesValue.toString().padStart(2, '0');
+                }
+                seconds.textContent = secondsValue.toString().padStart(2, '0');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
